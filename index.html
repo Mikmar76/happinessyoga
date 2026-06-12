@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="site_title">Йога Счастья</title>
+  <meta name="description" content="Хатха-йога студия — гармония тела и духа">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__inner container">
+        <a href="#" class="header__logo" data-i18n="header_logo">Йога Счастья</a>
+        <nav class="header__nav" id="nav">
+          <a href="#about" class="header__link" data-i18n="nav_about">О нас</a>
+          <a href="#instructor" class="header__link" data-i18n="nav_instructor">Преподаватель</a>
+          <a href="#schedule" class="header__link" data-i18n="nav_schedule">Расписание</a>
+          <a href="#pricing" class="header__link" data-i18n="nav_pricing">Цены</a>
+          <a href="#gallery" class="header__link" data-i18n="nav_gallery">Галерея</a>
+          <a href="#faq" class="header__link" data-i18n="nav_faq">FAQ</a>
+          <a href="#contact" class="header__link" data-i18n="nav_contact">Контакты</a>
+        </nav>
+        <div class="header__lang">
+          <button class="header__lang-btn is-active" data-lang="ru">RU</button>
+          <button class="header__lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="header__burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title" data-i18n="hero_title">Йога Счастья</h1>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Обрети гармонию тела и духа</p>
+        <a href="#contact" class="hero__btn btn" data-i18n="hero_cta">Записаться</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title" data-i18n="about_title">О хатха-йоге</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p data-i18n="about_p1">Хатха-йога — это древняя практика, объединяющая физические асаны, дыхательные техники (пранаяму) и медитацию. Это фундаментальное направление йоги, которое подготавливает тело и ум к более глубоким практикам.</p>
+            <p data-i18n="about_p2">Наша студия предлагает занятия для всех уровней подготовки — от новичков до опытных практикующих. Мы делаем акцент на правильном выравнивании, осознанном дыхании и индивидуальном подходе к каждому ученику.</p>
+            <p data-i18n="about_p3">Регулярная практика хатха-йоги улучшает гибкость, укрепляет мышцы, снижает стресс и наполняет энергией.</p>
+          </div>
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80" alt="Yoga class" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructor -->
+    <section class="instructor section" id="instructor">
+      <div class="container">
+        <h2 class="section__title" data-i18n="instructor_title">Преподаватель</h2>
+        <div class="instructor__card">
+          <div class="instructor__photo">
+            <img src="img/instructor.png" alt="Olesia Tabachkova" loading="lazy">
+          </div>
+          <div class="instructor__info">
+            <h3 class="instructor__name" data-i18n="instructor_name">Табачкова Олеся</h3>
+            <p class="instructor__badge" data-i18n="instructor_badge">Сертифицированный инструктор хатха-йоги</p>
+            <p data-i18n="instructor_p1">Опытный преподаватель хатха-йоги с глубоким пониманием традиционных практик и современного подхода к обучению.</p>
+            <p data-i18n="instructor_p2">Олеся Владимировна помогает ученикам раскрыть потенциал тела и ума через мягкую, осознанную практику, уделяя внимание выравниванию и дыханию.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="schedule section" id="schedule">
+      <div class="container">
+        <h2 class="section__title" data-i18n="schedule_title">Расписание</h2>
+        <p class="section__subtitle" data-i18n="schedule_sub">Выберите дату, чтобы увидеть доступные занятия</p>
+        <div class="schedule__wrapper">
+          <div class="calendar" id="calendar"></div>
+          <div class="schedule__list" id="scheduleList">
+            <p class="schedule__placeholder" data-i18n="schedule_placeholder">Выберите дату в календаре</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <h2 class="section__title" data-i18n="pricing_title">Абонементы</h2>
+        <div class="pricing__grid">
+          <div class="pricing__card">
+            <h3 class="pricing__card-title" data-i18n="price_1_title">Разовое занятие</h3>
+            <p class="pricing__price">800 ₽</p>
+            <ul class="pricing__features">
+              <li data-i18n="price_1_f1">1 занятие</li>
+              <li data-i18n="price_1_f2">Любое направление</li>
+              <li data-i18n="price_1_f3">Коврик в подарок</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline" data-i18n="price_btn">Записаться</a>
+          </div>
+          <div class="pricing__card pricing__card--featured">
+            <div class="pricing__badge" data-i18n="price_popular">Популярное</div>
+            <h3 class="pricing__card-title" data-i18n="price_2_title">4 занятия</h3>
+            <p class="pricing__price">2 800 ₽</p>
+            <ul class="pricing__features">
+              <li data-i18n="price_2_f1">4 занятия</li>
+              <li data-i18n="price_2_f2">Срок действия — месяц</li>
+              <li data-i18n="price_2_f3">Экономия 400 ₽</li>
+            </ul>
+            <a href="#contact" class="btn" data-i18n="price_btn">Записаться</a>
+          </div>
+          <div class="pricing__card">
+            <h3 class="pricing__card-title" data-i18n="price_3_title">8 занятий</h3>
+            <p class="pricing__price">5 200 ₽</p>
+            <ul class="pricing__features">
+              <li data-i18n="price_3_f1">8 занятий</li>
+              <li data-i18n="price_3_f2">Срок действия — 2 месяца</li>
+              <li data-i18n="price_3_f3">Экономия 1 200 ₽</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline" data-i18n="price_btn">Записаться</a>
+          </div>
+          <div class="pricing__card">
+            <h3 class="pricing__card-title" data-i18n="price_4_title">Безлимит на месяц</h3>
+            <p class="pricing__price">6 500 ₽</p>
+            <ul class="pricing__features">
+              <li data-i18n="price_4_f1">Неограниченно</li>
+              <li data-i18n="price_4_f2">Все направления</li>
+              <li data-i18n="price_4_f3">Запись без ограничений</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline" data-i18n="price_btn">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <h2 class="section__title" data-i18n="gallery_title">Галерея</h2>
+        <div class="gallery__grid" id="galleryGrid">
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Yoga" loading="lazy"></div>
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Meditation" loading="lazy"></div>
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80" alt="Yoga pose" loading="lazy"></div>
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&q=80" alt="Yoga" loading="lazy"></div>
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80" alt="Yoga studio" loading="lazy"></div>
+          <div class="gallery__item"><img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80" alt="Yoga class" loading="lazy"></div>
+        </div>
+      </div>
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev">&lsaquo;</button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext">&rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <h2 class="section__title" data-i18n="testimonials_title">Отзывы</h2>
+        <div class="carousel" id="carousel">
+          <div class="carousel__track" id="carouselTrack">
+            <div class="carousel__slide">
+              <p class="carousel__text" data-i18n="testimonial_1">"Йога Счастья стала моим вторым домом. После месяца занятий я почувствовала невероятную лёгкость в теле и спокойствие в уме. Анна — чуткий и профессиональный преподаватель."</p>
+              <p class="carousel__author" data-i18n="testimonial_1_a">— Елена, 34 года</p>
+            </div>
+            <div class="carousel__slide">
+              <p class="carousel__text" data-i18n="testimonial_2">"Начал заниматься с нуля после рекомендации врача. Через 3 месяца забыл о боли в спине. Очень рад, что нашёл эту студию. Рекомендую всем!"</p>
+              <p class="carousel__author" data-i18n="testimonial_2_a">— Дмитрий, 42 года</p>
+            </div>
+            <div class="carousel__slide">
+              <p class="carousel__text" data-i18n="testimonial_3">"Хожу на занятия уже полгода. Ушла тревожность, появилась энергия и уверенность в себе. Атмосфера в студии невероятно поддерживающая и тёплая."</p>
+              <p class="carousel__author" data-i18n="testimonial_3_a">— Мария, 28 лет</p>
+            </div>
+          </div>
+          <div class="carousel__dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <h2 class="section__title" data-i18n="faq_title">Частые вопросы</h2>
+        <div class="accordion" id="accordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" data-i18n="faq_q1">Нужна ли предварительная подготовка?</button>
+            <div class="accordion__content"><p data-i18n="faq_a1">Нет, наши занятия подходят для любого уровня подготовки. Преподаватель адаптирует практику под каждого ученика, предлагая облегчённые и усложнённые варианты асан.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" data-i18n="faq_q2">Что взять с собой на занятие?</button>
+            <div class="accordion__content"><p data-i18n="faq_a2">Удобную одежду, не стесняющую движений. Коврики и всё необходимое оборудование предоставляется студией. Также рекомендуется взять бутылочку воды.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" data-i18n="faq_q3">Есть ли противопоказания?</button>
+            <div class="accordion__content"><p data-i18n="faq_a3">При серьёзных заболеваниях опорно-двигательного аппарата, сердечно-сосудистой системы или обострениях хронических заболеваний перед началом занятий рекомендуется проконсультироваться с врачом. Предупредите преподавателя о любых особенностях здоровья.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" data-i18n="faq_q4">Как часто нужно заниматься?</button>
+            <div class="accordion__content"><p data-i18n="faq_a4">Оптимально — 2-4 раза в неделю. Регулярность важнее интенсивности. Даже 2 занятия в неделю дадут заметный результат через месяц.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" data-i18n="faq_q5">Можно ли заморозить абонемент?</button>
+            <div class="accordion__content"><p data-i18n="faq_a5">Да, вы можете заморозить абонемент на срок до 30 дней в случае болезни или отпуска. Просто предупредите нас заранее.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog section" id="blog">
+      <div class="container">
+        <h2 class="section__title" data-i18n="blog_title">Блог о йоге</h2>
+        <div class="blog__grid">
+          <article class="blog__card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="Meditation" loading="lazy">
+            <div class="blog__body">
+              <span class="blog__date" data-i18n="blog_1_date">12 мая 2026</span>
+              <h3 data-i18n="blog_1_title">5 простых асан для утренней практики</h3>
+              <p data-i18n="blog_1_excerpt">Начните день с энергии — всего 15 минут помогут проснуться и настроиться на продуктивный день.</p>
+            </div>
+          </article>
+          <article class="blog__card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80" alt="Yoga pose" loading="lazy">
+            <div class="blog__body">
+              <span class="blog__date" data-i18n="blog_2_date">28 апреля 2026</span>
+              <h3 data-i18n="blog_2_title">Пранаяма: дыхание жизни</h3>
+              <p data-i18n="blog_2_excerpt">Освойте базовые дыхательные техники, чтобы управлять стрессом и повышать концентрацию.</p>
+            </div>
+          </article>
+          <article class="blog__card">
+            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=400&q=80" alt="Yoga" loading="lazy">
+            <div class="blog__body">
+              <span class="blog__date" data-i18n="blog_3_date">10 апреля 2026</span>
+              <h3 data-i18n="blog_3_title">Как йога меняет тело за месяц</h3>
+              <p data-i18n="blog_3_excerpt">Реальные изменения, которые вы заметите уже через 4 недели регулярных занятий хатха-йогой.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title" data-i18n="contact_title">Контакты</h2>
+        <div class="contact__wrapper">
+          <div class="contact__info">
+            <div class="contact__item">
+              <svg class="contact__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="contact_address">г. Москва, ул. Тверская, 15, офис 304</span>
+            </div>
+            <div class="contact__item">
+              <svg class="contact__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>hello@happinessyoga.ru</span>
+            </div>
+            <div class="contact__item">
+              <svg class="contact__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+7 (495) 123-45-67</span>
+            </div>
+            <div class="contact__socials">
+              <a href="#" class="contact__social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="contact__social-link" aria-label="Telegram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215L2.268 9.45a1.648 1.648 0 0 0 .153 3.092l4.605 1.588 2.687 8.534a1.649 1.649 0 0 0 2.936.524l3.764-4.573 5.214 3.838a1.648 1.648 0 0 0 2.568-.888l3.19-14.254a2.242 2.242 0 0 0-2.187-2.878z"/></svg>
+              </a>
+              <a href="#" class="contact__social-link" aria-label="YouTube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29.1 29.1 0 0 0 1 12a29.1 29.1 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29.1 29.1 0 0 0 23 12a29.1 29.1 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <h3 class="contact__form-title" data-i18n="form_title">Записаться на занятие</h3>
+            <input type="text" class="contact__input" data-i18n-placeholder="form_name" placeholder="Ваше имя" required>
+            <input type="tel" class="contact__input" data-i18n-placeholder="form_phone" placeholder="Телефон" required>
+            <input type="email" class="contact__input" data-i18n-placeholder="form_email" placeholder="Email" required>
+            <select class="contact__input contact__select" data-i18n-options="form_options">
+              <option value="" data-i18n="form_option_select">Выберите направление</option>
+              <option value="morning" data-i18n="form_option_morning">Утренняя хатха</option>
+              <option value="evening" data-i18n="form_option_evening">Вечерняя хатха</option>
+              <option value="private" data-i18n="form_option_private">Индивидуальное занятие</option>
+            </select>
+            <textarea class="contact__input contact__textarea" data-i18n-placeholder="form_message" placeholder="Комментарий" rows="3"></textarea>
+            <button type="submit" class="btn contact__submit" data-i18n="form_submit">Отправить</button>
+          </form>
+        </div>
+        <div class="contact__map">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=37.6173%2C55.7558%2C37.6273%2C55.7658&amp;layer=mapnik&amp;marker=55.7608%2C37.6223" width="100%" height="360" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">&copy; 2026 <span data-i18n="footer_copy">Йога Счастья</span></p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215L2.268 9.45a1.648 1.648 0 0 0 .153 3.092l4.605 1.588 2.687 8.534a1.649 1.649 0 0 0 2.936.524l3.764-4.573 5.214 3.838a1.648 1.648 0 0 0 2.568-.888l3.19-14.254a2.242 2.242 0 0 0-2.187-2.878z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29.1 29.1 0 0 0 1 12a29.1 29.1 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29.1 29.1 0 0 0 23 12a29.1 29.1 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
