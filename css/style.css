@@ -197,13 +197,13 @@ input, textarea, select { font: inherit; }
 
 /* Hero */
 .hero {
-  min-height: calc(100vh - var(--header-height));
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  min-height: calc(100vh - var(--header-height));
   margin-top: var(--header-height);
+  overflow: hidden;
 }
 
 .hero__bg {
@@ -226,8 +226,9 @@ input, textarea, select { font: inherit; }
   z-index: 1;
   text-align: center;
   color: var(--color-white);
-  padding: 40px 20px 0;
+  padding: 40px 20px;
   max-width: 700px;
+  width: 100%;
 }
 
 .hero__title {
@@ -990,48 +991,24 @@ input, textarea, select { font: inherit; }
 
   .schedule__wrapper { grid-template-columns: 1fr; }
 
-  .hero {
-    min-height: 0;
-    height: 60vh;
-    align-items: flex-end;
-  }
-  .hero__bg {
-    object-fit: cover;
-    object-position: center 30%;
-  }
-  .hero__content { padding: 0 20px 24px; }
+  .hero__content { padding: 20px; }
   .hero__title { font-size: 2.4rem; margin-bottom: 8px; }
-  .hero__subtitle { font-size: 0.95rem; }
-  .hero__subtitle { margin-bottom: 16px; }
+  .hero__subtitle { font-size: 0.95rem; margin-bottom: 16px; }
   .hero__btn { padding: 12px 28px; font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
   .gallery__grid { grid-template-columns: 1fr; }
-  .hero {
-    height: 55vh;
-  }
-  .hero__bg {
-    object-position: center 25%;
-  }
-  .hero__content { padding: 0 12px 16px; }
+  .hero__content { padding: 16px; }
   .hero__title { font-size: 1.8rem; margin-bottom: 6px; }
-  .hero__subtitle { font-size: 0.82rem; }
-  .hero__subtitle { margin-bottom: 12px; }
+  .hero__subtitle { font-size: 0.82rem; margin-bottom: 12px; }
   .hero__btn { padding: 8px 20px; font-size: 0.82rem; }
   .contact__form { padding: 20px; }
   .pricing__card { padding: 24px 20px; }
 }
 
 @media (min-width: 769px) {
-  .hero {
-    min-height: calc(56.25vw + 260px);
-  }
-  .hero__bg {
-    object-fit: contain;
-    object-position: top center;
-  }
   .hero__content {
-    padding: 0 20px 40px;
+    padding: 0 20px 60px;
   }
 }
