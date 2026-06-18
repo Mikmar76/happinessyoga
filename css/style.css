@@ -1039,6 +1039,12 @@ input, textarea, select { font: inherit; }
   }
   .hero__bg {
     object-fit: cover;
-    object-position: right center;
+    object-position: left center;
+  }
+  .hero__overlay {
+    z-index: 0;
+  }
+  .hero__content {
+    z-index: 1;
   }
 }
